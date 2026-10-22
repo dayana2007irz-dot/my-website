@@ -50,6 +50,9 @@ def calculator():
             message = "Введите правильные числа"
 
     return render_template("calculator.html", area=area, message=message)
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+    app.run(
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 10000))
+    )
