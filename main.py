@@ -50,6 +50,8 @@ def calculator():
             message = "Введите правильные числа"
 
     return render_template("calculator.html", area=area, message=message)
+
+
 if __name__ == "__main__":
     import os
     app.run(
